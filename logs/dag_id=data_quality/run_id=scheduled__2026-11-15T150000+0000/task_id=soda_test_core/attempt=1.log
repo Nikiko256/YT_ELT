@@ -1,0 +1,31 @@
+[2026-11-17T02:46:37.978+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-11-17T02:46:38.042+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_quality.soda_test_core scheduled__2026-11-15T15:00:00+00:00 [queued]>
+[2026-11-17T02:46:38.068+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_quality.soda_test_core scheduled__2026-11-15T15:00:00+00:00 [queued]>
+[2026-11-17T02:46:38.069+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-11-17T02:46:38.102+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): soda_test_core> on 2026-11-15 15:00:00+00:00
+[2026-11-17T02:46:38.116+0000] {standard_task_runner.py:63} INFO - Started process 5950 to run task
+[2026-11-17T02:46:38.121+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'data_quality', 'soda_test_core', 'scheduled__2026-11-15T15:00:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpw9nbb0ft']
+[2026-11-17T02:46:38.124+0000] {standard_task_runner.py:91} INFO - Job 60: Subtask soda_test_core
+[2026-11-17T02:46:38.213+0000] {task_command.py:426} INFO - Running <TaskInstance: data_quality.soda_test_core scheduled__2026-11-15T15:00:00+00:00 [running]> on host 2d780227c679
+[2026-11-17T02:46:38.332+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='data@engineers.com' AIRFLOW_CTX_DAG_OWNER='dataengineers' AIRFLOW_CTX_DAG_ID='data_quality' AIRFLOW_CTX_TASK_ID='soda_test_core' AIRFLOW_CTX_EXECUTION_DATE='2026-11-15T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-11-15T15:00:00+00:00'
+[2026-11-17T02:46:38.335+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-11-17T02:46:38.337+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-11-17T02:46:38.340+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'soda scan -d pg_datasource -c /opt/airflow/include/soda/configuration.yml -v SCHEMA=core /opt/airflow/include/soda/checks.yml']
+[2026-11-17T02:46:38.368+0000] {subprocess.py:86} INFO - Output:
+[2026-11-17T02:46:39.590+0000] {subprocess.py:93} INFO - [02:46:39] Soda Core 3.5.6
+[2026-11-17T02:46:39.728+0000] {subprocess.py:93} INFO - [02:46:39] Using DefaultSampler
+[2026-11-17T02:46:39.730+0000] {subprocess.py:93} INFO - [02:46:39] Using DefaultSampler
+[2026-11-17T02:46:39.732+0000] {subprocess.py:93} INFO - [02:46:39] Scan summary:
+[2026-11-17T02:46:39.733+0000] {subprocess.py:93} INFO - [02:46:39] 4/4 checks PASSED:
+[2026-11-17T02:46:39.735+0000] {subprocess.py:93} INFO - [02:46:39]     yt_api in pg_datasource
+[2026-11-17T02:46:39.737+0000] {subprocess.py:93} INFO - [02:46:39]       Check Likes Greater Than Video Views [PASSED]
+[2026-11-17T02:46:39.738+0000] {subprocess.py:93} INFO - [02:46:39]       Check Comments Greater Than Video Views [PASSED]
+[2026-11-17T02:46:39.740+0000] {subprocess.py:93} INFO - [02:46:39]       missing_count("Video_ID") = 0 [PASSED]
+[2026-11-17T02:46:39.742+0000] {subprocess.py:93} INFO - [02:46:39]       duplicate_count("Video_ID") = 0 [PASSED]
+[2026-11-17T02:46:39.743+0000] {subprocess.py:93} INFO - [02:46:39] All is good. No failures. No warnings. No errors.
+[2026-11-17T02:46:40.294+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-11-17T02:46:40.296+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-11-17T02:46:40.332+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_quality, task_id=soda_test_core, run_id=scheduled__2026-11-15T15:00:00+00:00, execution_date=20261115T150000, start_date=20261117T024638, end_date=20261117T024640
+[2026-11-17T02:46:40.390+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-11-17T02:46:40.413+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-17T02:46:40.417+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
