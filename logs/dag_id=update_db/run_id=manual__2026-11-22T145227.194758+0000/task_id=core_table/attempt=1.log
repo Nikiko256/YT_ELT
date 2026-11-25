@@ -1,0 +1,42 @@
+[2026-11-22T14:52:32.325+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-11-22T14:52:32.365+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: update_db.core_table manual__2026-11-22T14:52:27.194758+00:00 [queued]>
+[2026-11-22T14:52:32.383+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: update_db.core_table manual__2026-11-22T14:52:27.194758+00:00 [queued]>
+[2026-11-22T14:52:32.385+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-11-22T14:52:32.406+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): core_table> on 2026-11-22 14:52:27.194758+00:00
+[2026-11-22T14:52:32.419+0000] {standard_task_runner.py:63} INFO - Started process 16250 to run task
+[2026-11-22T14:52:32.424+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'update_db', 'core_table', 'manual__2026-11-22T14:52:27.194758+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpngkf3ovr']
+[2026-11-22T14:52:32.426+0000] {standard_task_runner.py:91} INFO - Job 130: Subtask core_table
+[2026-11-22T14:52:32.502+0000] {task_command.py:426} INFO - Running <TaskInstance: update_db.core_table manual__2026-11-22T14:52:27.194758+00:00 [running]> on host 2d780227c679
+[2026-11-22T14:52:32.621+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='data@engineers.com' AIRFLOW_CTX_DAG_OWNER='dataengineers' AIRFLOW_CTX_DAG_ID='update_db' AIRFLOW_CTX_TASK_ID='core_table' AIRFLOW_CTX_EXECUTION_DATE='2026-11-22T14:52:27.194758+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-22T14:52:27.194758+00:00'
+[2026-11-22T14:52:32.623+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-11-22T14:52:32.642+0000] {base.py:84} INFO - Using connection ID 'postgres_db_yt_elt' for task execution.
+[2026-11-22T14:52:32.652+0000] {base.py:84} INFO - Using connection ID 'postgres_db_yt_elt' for task execution.
+[2026-11-22T14:52:32.662+0000] {base.py:84} INFO - Using connection ID 'postgres_db_yt_elt' for task execution.
+[2026-11-22T14:52:32.676+0000] {data_modification.py:78} INFO - Updated row with Video_ID: zRtGL0-5rg4
+[2026-11-22T14:52:32.680+0000] {data_modification.py:78} INFO - Updated row with Video_ID: R7MkZL5i3FQ
+[2026-11-22T14:52:32.684+0000] {data_modification.py:78} INFO - Updated row with Video_ID: 0yPgljFcTR4
+[2026-11-22T14:52:32.688+0000] {data_modification.py:78} INFO - Updated row with Video_ID: 8krJy31Diow
+[2026-11-22T14:52:32.692+0000] {data_modification.py:78} INFO - Updated row with Video_ID: aZnqqXaT02g
+[2026-11-22T14:52:32.695+0000] {data_modification.py:78} INFO - Updated row with Video_ID: kX3nB4PpJko
+[2026-11-22T14:52:32.699+0000] {data_modification.py:78} INFO - Updated row with Video_ID: UE5AHE2Ypr8
+[2026-11-22T14:52:32.703+0000] {data_modification.py:78} INFO - Updated row with Video_ID: 0NGWT9COcEI
+[2026-11-22T14:52:32.707+0000] {data_modification.py:78} INFO - Updated row with Video_ID: Su34c5Z8DW4
+[2026-11-22T14:52:32.711+0000] {data_modification.py:78} INFO - Updated row with Video_ID: xBLxMfO3pDw
+[2026-11-22T14:52:32.715+0000] {data_modification.py:78} INFO - Updated row with Video_ID: igVcy5dtN80
+[2026-11-22T14:52:32.718+0000] {data_modification.py:78} INFO - Updated row with Video_ID: tqO3_AKC5Ks
+[2026-11-22T14:52:32.722+0000] {data_modification.py:78} INFO - Updated row with Video_ID: 8nv_ltg4RAg
+[2026-11-22T14:52:32.725+0000] {data_modification.py:78} INFO - Updated row with Video_ID: mY77HA20MzA
+[2026-11-22T14:52:32.729+0000] {data_modification.py:78} INFO - Updated row with Video_ID: QqIG0R-KpGk
+[2026-11-22T14:52:32.732+0000] {data_modification.py:78} INFO - Updated row with Video_ID: Vr2337tCLCI
+[2026-11-22T14:52:32.735+0000] {data_modification.py:78} INFO - Updated row with Video_ID: L7lGD_anC00
+[2026-11-22T14:52:32.739+0000] {data_modification.py:78} INFO - Updated row with Video_ID: 67Wj-0OyKOM
+[2026-11-22T14:52:32.742+0000] {data_modification.py:78} INFO - Updated row with Video_ID: XVMY7B3AzWM
+[2026-11-22T14:52:32.746+0000] {data_modification.py:78} INFO - Updated row with Video_ID: Jl0-6tbNGBo
+[2026-11-22T14:52:32.750+0000] {data_modification.py:78} INFO - Updated row with Video_ID: 2XVcLrB7B3Y
+[2026-11-22T14:52:32.751+0000] {dwh.py:107} INFO - core table update completed
+[2026-11-22T14:52:32.753+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-11-22T14:52:32.755+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-11-22T14:52:32.769+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=update_db, task_id=core_table, run_id=manual__2026-11-22T14:52:27.194758+00:00, execution_date=20261122T145227, start_date=20261122T145232, end_date=20261122T145232
+[2026-11-22T14:52:32.800+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-11-22T14:52:32.829+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-11-22T14:52:32.833+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
