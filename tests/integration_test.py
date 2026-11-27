@@ -7,19 +7,13 @@ def test_youtube_api_response(airflow_variable):
     api_key = airflow_variable("api_key")
     channel_handle = airflow_variable("channel_handle")
 
-    url = "https://www.googleapis.com/youtube/v3/channels"
+    url = f"https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forHandle={channel_handle}&key={api_key}"
 
-    params = {
-        "part": "contentDetails",
-        "forHandle": channel_handle,
-        "key": api_key
-    }
-
-    response = requests.get(url, params=params, timeout=15)
-
-    assert response.status_code == 200, (
-        f"YouTube API error: {response.text}"
-    )
+    try:
+        response = requests.get(url)
+        assert response.status_code == 200
+    except requests.RequestException as e:
+        pytest.fail(f"Request to YouTube API failed: {e}")
 
 
 def test_real_postgres_connection(real_postgres_connection):
