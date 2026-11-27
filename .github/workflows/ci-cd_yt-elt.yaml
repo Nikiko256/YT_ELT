@@ -75,7 +75,7 @@ jobs:
           id: changed-files-tests
           uses: tj-actions/changed-files@v45
           with:
-            files: |
+            files: 
                 dags/**
                 include/**
                 docker-compose.yaml
@@ -87,7 +87,7 @@ jobs:
           run: docker exec -t airflow-worker sh -c "pytest tests/ -v"
         - name: Run End-to-End DAG Tests
           if: steps.changed-files-tests.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
-          run: |
+          run: 
             DAG_NAMES=("produce_json" "update_db" "data_quality")
             for DAG in "${DAG_NAMES[@]}"; do 
               docker exec -t airflow-worker sh -c "airflow dags test $DAG"
