@@ -15,13 +15,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@v5
+              uses: actions/checkout@v4
             - name: Get changed files
               id: changed-files-build
               uses: tj-actions/changed-files@v45
               with:
                 files: |
-                    dockerfile
+                    Dockerfile
                     requirements.txt
             - name: Set up Docker Buildx
               if: steps.changed-files-build.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
@@ -75,7 +75,7 @@ jobs:
           id: changed-files-tests
           uses: tj-actions/changed-files@v45
           with:
-            files: 
+            files: |
                 dags/**
                 include/**
                 docker-compose.yaml
