@@ -1,3 +1,5 @@
+import requests
+
 def test_youtube_api_response(airflow_variable):
     api_key = airflow_variable("api_key")
     channel_handle = airflow_variable("channel_handle")
