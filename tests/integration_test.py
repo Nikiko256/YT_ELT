@@ -1,5 +1,6 @@
 import requests
 import pytest
+import psycopg2
 
 
 def test_youtube_api_response(airflow_variable):
