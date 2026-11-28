@@ -8,10 +8,10 @@ logger = logging.getLogger(__name__)
 
 def load_data():
     
-    #file_path = f" ./data/Yt_data_{date.today()}.json"
+    #file_path = f" ./data/YT_data_{date.today()}.json"
     
     file_path = Path(
-        f"/opt/airflow/data/Yt_data_{date.today()}.json"
+        f"/opt/airflow/data/YT_data_{date.today()}.json"
     )
 
     
